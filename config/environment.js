@@ -3,10 +3,11 @@
 module.exports = function(environment) {
   // global settings
   var ENV = {
-    modulePrefix: 'sommer',
-    environment:  environment,
-    baseURL:      '/',
-    locationType: 'auto',
+    modulePrefix:     'sommer',
+    podModulePrefix:  'sommer/pods',
+    baseURL:          '/',
+    locationType:     'auto',
+    environment:      environment,
 
     EmberENV: {
       FEATURES: {
