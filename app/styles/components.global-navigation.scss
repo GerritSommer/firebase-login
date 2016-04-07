@@ -1,0 +1,19 @@
+.navigation {
+
+  &__list {
+    display: inline-block;
+
+    &__item {
+      display: inline-block;
+
+      a {
+
+      }
+
+      &--branded a {
+        color: red;
+      }
+    }
+  }
+
+}
