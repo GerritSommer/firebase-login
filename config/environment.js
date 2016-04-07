@@ -1,11 +1,13 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  // global settings
   var ENV = {
     modulePrefix: 'sommer',
-    environment: environment,
-    baseURL: '/',
+    environment:  environment,
+    baseURL:      '/',
     locationType: 'auto',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -16,8 +18,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    i18n: {
+      defaultLocale: 'en'
     }
+
   };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -29,12 +37,12 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    ENV.baseURL      = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+    ENV.APP.LOG_VIEW_LOOKUPS      = false;
 
     ENV.APP.rootElement = '#ember-testing';
   }
