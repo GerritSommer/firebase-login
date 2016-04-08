@@ -9,6 +9,16 @@ module.exports = function(environment) {
     locationType:     'auto',
     environment:      environment,
 
+    firebase: 'https://sommer.firebaseio.com/',
+
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
+    },
+
+    torii: {
+      sessionServiceName: 'authInterface'
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

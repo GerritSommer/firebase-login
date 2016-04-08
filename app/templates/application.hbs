@@ -3,8 +3,8 @@
 {{outlet}}
 
 // app/templates/application.hbs
-{{#if session.isAuthenticated}}
-  Logged in as {{session.currentUser.displayName}}
+{{#if authInterface.isAuthenticated}}
+  Logged in as {{authInterface.currentUser.displayName}}
   <button {{action "signOut"}}>Sign out</button>
   {{outlet}}
 {{else}}
