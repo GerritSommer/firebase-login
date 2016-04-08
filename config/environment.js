@@ -16,7 +16,10 @@ module.exports = function(environment) {
     },
 
     torii: {
-      sessionServiceName: 'authInterface'
+      sessionServiceName: 'auth',
+      providers: {
+        'password': {}
+      }
     },
 
     EmberENV: {

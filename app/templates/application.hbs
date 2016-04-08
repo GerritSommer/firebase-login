@@ -1,12 +1,3 @@
 {{render "navigation"}}
 
 {{outlet}}
-
-// app/templates/application.hbs
-{{#if authInterface.isAuthenticated}}
-  Logged in as {{authInterface.currentUser.displayName}}
-  <button {{action "signOut"}}>Sign out</button>
-  {{outlet}}
-{{else}}
-  <button {{action "signIn"}}>Sign in with Twitter</button>
-{{/if}}

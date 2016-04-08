@@ -1,5 +1,5 @@
-import globals from './shared/globals';
-
+// app/locales/de/translations.js
+//
 // "some.translation.key": "Text for some.translation.key",
 //
 // "a": {
@@ -10,7 +10,8 @@ import globals from './shared/globals';
 //
 // "key.with.interpolation": "Text with {{anInterpolation}}"
 
-export default {
+import globals from './shared/globals';
 
+export default {
   globals: globals
 };

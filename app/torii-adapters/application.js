@@ -1,3 +1,5 @@
+// app/torii-adapters/application.js
+
 import Ember                from 'ember';
 import ToriiFirebaseAdapter from 'emberfire/torii-adapters/firebase';
 

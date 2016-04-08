@@ -1,32 +1,23 @@
+// app/routes/application.js
+
 import Ember from 'ember';
 
-let Route = Ember.Route;
+let Route   = Ember.Route;
 let service = Ember.inject.service;
 
 export default Route.extend({
-
-  firebase: service(),
-  authInterface: service(),
-
-  // beforeModel: function() {
-  //   return this.get("authInterface")
-  //   .fetch()
-  //   .catch(function() {});
-  // },
+  session:  service(),
 
   actions: {
 
     signIn: function(email = 't@t.de', password = 'pw') {
-      this.get("authInterface").open("firebase", {
-        provider: 'password',
-        email:    email,
-        password: password
-      })
+      let options = { email: email, password: password };
+      this.get('session').authenticate('authenticator:torii', 'password', options);
       return;
     },
 
     signOut: function() {
-      this.get("authInterface").close();
+      this.get('session').invalidate();
       return;
     }
 

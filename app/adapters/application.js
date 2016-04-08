@@ -1,3 +1,5 @@
+// app/adapters/application.js
+
 import Ember           from 'ember';
 import FirebaseAdapter from 'emberfire/adapters/firebase';
 
