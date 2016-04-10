@@ -1,9 +1,15 @@
 <nav class="navigation">
-  <ul class="navigation__list">
-    <li class="navigation__list__item navigation__list__item--branded">
+  <ul class="navigation--list">
+
+    <li class="navigation--list--item navigation--list--item__branded">
       {{#link-to "index"}}
-        {{t "globals.brand"}} <
+        {{t "globals.brand"}}
       {{/link-to}}
     </li>
+
+    <li class="navigation--list--item">
+      {{login-form}}
+    </li>
+
   </ul>
 </nav>

@@ -12,11 +12,7 @@ export default Obj.extend({
     let torii        = this.get('auth');
     options.provider = 'password';
 
-    return torii.open("firebase", {
-      provider: 'password',
-      email:    email,
-      password: password
-    });
+    return torii.open("firebase", options);
   },
 
   restore() {

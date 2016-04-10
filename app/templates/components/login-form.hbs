@@ -1,0 +1,28 @@
+<form class="login--form {{if loginFailed 'login--form__invalid'}}">
+
+  {{#if session.isAuthenticated}}
+    <button {{action 'signOut'}} class="btn btn--small">logout</button>
+  {{else}}
+    {{input value=email
+      insert-newline="signIn"
+      class="text-input"
+      placeholder=(t 'user.attributes.email')
+      disabled=session.isWorking
+    }}
+
+    {{input value=password
+      insert-newline="signIn"
+      class="text-input"
+      placeholder=(t 'user.attributes.password')
+      disabled=session.isWorking
+    }}
+
+    <button {{action 'signIn'}} class="btn">login</button>
+  {{/if}}
+
+</form>
+{{!-- is Authenticating --}}
+{{!-- torii.isWorking --}}
+ {{!-- <img src='{{session.currentUser.profileImageURL}}' /> --}}
+
+{{yield}}

@@ -1,3 +1,13 @@
 // app/styles/app.scss
+//
+$base-ui-color: #EEE;
+$use-nav: true;
+$brand-face: 'Helvetica Neue', sans-serif;
+$use-beautons: true;
 
 @import "config.inuit";
+@import "components.login";
+
+[data-ember-action]:not(:disabled) {
+  cursor: pointer;
+}

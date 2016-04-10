@@ -10,8 +10,10 @@
 //
 // "key.with.interpolation": "Text with {{anInterpolation}}"
 
-import globals from './shared/globals';
+import globals  from './shared/globals';
+import user     from './shared/user';
 
 export default {
-  globals: globals
+  globals: globals,
+  user:    user
 };

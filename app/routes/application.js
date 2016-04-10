@@ -10,13 +10,13 @@ export default Route.extend({
 
   actions: {
 
-    signIn: function(email = 't@t.de', password = 'pw') {
+    signIn(email = 't@t.de', password = 'pw') {
       let options = { email: email, password: password };
       this.get('session').authenticate('authenticator:torii', 'password', options);
       return;
     },
 
-    signOut: function() {
+    signOut() {
       this.get('session').invalidate();
       return;
     }
