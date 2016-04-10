@@ -6,10 +6,16 @@ import SessionService from 'ember-simple-auth/services/session';
 let service = Ember.inject.service;
 let { RSVP, isBlank, computed } = Ember;
 
+// An interface for for authentication and user data
+// These infos are stored seperatly and need to be synced
+// The authentication database handles the uid, email and password/token
+// The user databse handles the custom attributes and relations
+
 export default SessionService.extend({
   store:    service(),
   firebase: service(),
 
+  // load the stored user for the login data
   computed: computed('currentUser', function() {
     debugger
   }),

@@ -12,6 +12,7 @@ export default Route.extend({
 
     signIn(email = 't@t.de', password = 'pw') {
       let options = { email: email, password: password };
+
       this.get('session').authenticate('authenticator:torii', 'password', options);
       return;
     },

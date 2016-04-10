@@ -54,9 +54,9 @@ export default function() {
   });
 
   this.get('/users');
+  this.post('/users');
   this.get('/users/:id');
   this.put('/users/:id');
-  this.post('/users');
   this.del('/users/:id');
 
 }

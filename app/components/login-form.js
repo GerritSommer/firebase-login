@@ -14,7 +14,6 @@ export default Ember.Component.extend({
   loginFailed: false,
 
   _signIn(options) {
-
     this.get('session').authenticate('authenticator:torii', 'password', options)
       .then(()=> {
         this.setProperties({
@@ -22,11 +21,9 @@ export default Ember.Component.extend({
           password:    '',
           loginFailed: false
         });
-        debugger;
       })
       .catch((e)=> {
         this.set('loginFailed', true)
-        debugger
       });
   },
 
