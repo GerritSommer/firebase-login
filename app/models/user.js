@@ -2,11 +2,10 @@
 import Ember  from 'ember';
 import DS     from 'ember-data';
 
-let Model    = DS.Model;
-let attr     = DS.attr;
-let computed = Ember.computed;
+let { Model, attr} = DS;
+let computed       = Ember.computed;
 
-export default DS.Model.extend({
+export default Model.extend({
   firstName: attr('string'),
   lastName:  attr('string'),
 

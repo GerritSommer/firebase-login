@@ -17,7 +17,7 @@ export default SessionService.extend({
 
   // load the stored user for the login data
   computed: computed('currentUser', function() {
-    debugger
+    // load the user
   }),
 
   _changeEmail(oldEmail, newEmail, password) {
@@ -31,7 +31,7 @@ export default SessionService.extend({
           newEmail : newEmail,
           password : password
         }, function(error) {
-          isBlank(error) ? resolve() : reject(error);
+          isBlank(error) ? resolve() : reject(error); // jshint ignore:line
         });
 
       }
@@ -50,7 +50,7 @@ export default SessionService.extend({
           oldPassword : oldPassword,
           newPassword : newPassword
         }, function(error) {
-          isBlank(error) ? resolve() : reject(error);
+          isBlank(error) ? resolve() : reject(error); // jshint ignore:line
         });
       }
 
@@ -68,7 +68,7 @@ export default SessionService.extend({
       email:    email,
       password: password,
     }, (error, data) => {
-      isBlank(error) ? resolve() : reject(error);
+      isBlank(error) ? resolve() : reject(error); // jshint ignore:line
     });
 
   },
@@ -82,7 +82,7 @@ export default SessionService.extend({
         email:     user,
         password : password
       }, function(error) {
-        isBlank(error) ? resolve() : reject(error);
+        isBlank(error) ? resolve() : reject(error); // jshint ignore:line
       });
     });
 
@@ -93,7 +93,7 @@ export default SessionService.extend({
       if (isBlank(password)) reject();
 
       this.get('firebase').resetPassword({ email : email }, function(error) {
-        isBlank(error) ? resolve() : reject(error);
+        isBlank(error) ? resolve() : reject(error); // jshint ignore:line
       });
 
     });

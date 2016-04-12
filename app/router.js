@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('users', function() {
     this.route('new');
   });
+  this.route('impressum');
+  this.route('contact', { path: 'kontakt' });
 });
 
 export default Router;

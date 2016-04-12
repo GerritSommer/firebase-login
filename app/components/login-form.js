@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 let service  = Ember.inject.service;
-let computed = Ember.computed;
 
 export default Ember.Component.extend({
   classNames:  [ 'login' ],
@@ -22,8 +21,8 @@ export default Ember.Component.extend({
           loginFailed: false
         });
       })
-      .catch((e)=> {
-        this.set('loginFailed', true)
+      .catch(()=> {
+        this.set('loginFailed', true);
       });
   },
 
@@ -45,7 +44,7 @@ export default Ember.Component.extend({
     },
 
     signOut() {
-      return this.get('session').invalidate();
+      this.get('session').invalidate();
       return;
     }
 

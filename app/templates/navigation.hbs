@@ -1,15 +1,30 @@
-<nav class="navigation">
-  <ul class="navigation--list">
+<div class="panel panel-default">
+  <div class="panel-heading borderless">
+    <img src="assets/images/logo.png" alt="logo" class="img-responsive center-block">
+  </div>
 
-    <li class="navigation--list--item navigation--list--item__branded">
-      {{#link-to "index"}}
-        {{t "globals.brand"}}
-      {{/link-to}}
-    </li>
+  <div class="panel-body">
+    <i class="fa fa-close pull-right" onclick={{action toggleNavigation}}></i>
+    <ul class="list-unstyled sidebar-nav">
 
-    <li class="navigation--list--item">
-      {{login-form}}
-    </li>
+      <li class="text-uppercase">
+        {{#link-to 'application'}}
+          Kater
+        {{/link-to}}
+      </li>
 
-  </ul>
-</nav>
+      <li class="text-uppercase">
+        {{#link-to 'contact'}}
+          Kontakt
+        {{/link-to}}
+      </li>
+
+    </ul>
+  </div>
+
+
+
+
+
+</div>
+
