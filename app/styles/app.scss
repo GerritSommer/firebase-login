@@ -1,13 +1,37 @@
 // app/styles/app.scss
-//
-$base-ui-color: #EEE;
-$use-nav: true;
-$brand-face: 'Helvetica Neue', sans-serif;
-$use-beautons: true;
 
-@import "config.inuit";
-@import "components.login";
+@import "global/fonts";
+@import "global/colours";
+@import "global/bootstrap-variables";
+
+@import "global/panels";
+
+@import 'bootstrap';
+
+@import "components/sidebar";
 
 [data-ember-action]:not(:disabled) {
   cursor: pointer;
+}
+
+body {
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  background-size: cover;
+  margin: 2em 0;
+}
+
+hr {
+  border: 0;
+  color: rgb(226,226,226);
+  background-color: rgb(226,226,226);
+  height: 1px;
+  margin: .5em 0;
+}
+
+
+.container-fluid {
+  max-width: 1600px;
 }

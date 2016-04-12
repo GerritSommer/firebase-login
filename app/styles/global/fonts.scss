@@ -1,0 +1,57 @@
+
+@font-face {
+ font-family: myriad;
+ src: url("fonts/myriadc.eot") /* EOT file for IE */
+}
+
+@font-face {
+ font-family: myriad;
+ src: url("fonts/myriadc.TTF") /* TTF file for CSS3 browsers */
+}
+
+body {
+  // font-family: Helvetica, Arial, sans-serif;
+  // color: #555555;
+  // font-size: 16px;
+  //   text-rendering: optimizeLegibility;
+
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.1em;
+  color: #c71585;
+  font-family: myriad;
+}
+
+a {
+  color: #91275B;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+
+
+small {
+  font-size: 0.8em;
+}

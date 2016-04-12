@@ -1,0 +1,10 @@
+.panel {
+  & > .panel-heading.borderless {
+    border-bottom: none;
+  }
+
+  & > .panel-footer.borderless {
+    border-top: none;
+  }
+
+}
