@@ -23,8 +23,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #91275B;
   text-decoration: underline;
+
+  &.default-color {
+    color: $text-color;
+  }
 }
 
 a:hover {
@@ -54,4 +57,9 @@ h4 {
 
 small {
   font-size: 0.8em;
+}
+
+
+.active.hide-active-link {
+  display: none;
 }

@@ -1,4 +1,11 @@
+
+
 .panel {
+
+  &.panel-default {
+    border: 1px solid rgba(255,255,255,.8);
+    box-shadow: 0 0 5px #fff;
+  }
   & > .panel-heading.borderless {
     border-bottom: none;
   }

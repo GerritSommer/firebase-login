@@ -1,14 +1,15 @@
 // app/styles/app.scss
-
-@import "global/fonts";
 @import "global/colours";
 @import "global/bootstrap-variables";
+@import "global/fonts";
 
 @import "global/panels";
+@import "global/forms";
 
 @import 'bootstrap';
 
 @import "components/sidebar";
+@import "components/menu";
 
 [data-ember-action]:not(:disabled) {
   cursor: pointer;
@@ -35,3 +36,4 @@ hr {
 .container-fluid {
   max-width: 1600px;
 }
+
