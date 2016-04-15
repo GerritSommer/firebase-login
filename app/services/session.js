@@ -1,15 +1,14 @@
 // app/services/session.js
 import Ember          from 'ember';
-import DS             from 'ember-data';
 import SessionService from 'ember-simple-auth/services/session';
 
-let service = Ember.inject.service;
+let service                     = Ember.inject.service;
 let { RSVP, isBlank, computed } = Ember;
 
 // An interface for for authentication and user data
 // These infos are stored seperatly and need to be synced
 // The authentication database handles the uid, email and password/token
-// The user databse handles the custom attributes and relations
+// The user database handles the custom attributes and relations
 
 export default SessionService.extend({
   store:    service(),
@@ -62,13 +61,16 @@ export default SessionService.extend({
   },
 
   createUser(email, password) {
-    if ( isBlank(email) || isBlank(password) ) reject();
+    return new RSVP.Promise((resolve, reject)=> {
+      if ( isBlank(email) || isBlank(password) ) reject();
 
-    this.get('firebase').createUser({
-      email:    email,
-      password: password,
-    }, (error, data) => {
-      isBlank(error) ? resolve() : reject(error); // jshint ignore:line
+      this.get('firebase').createUser({
+        email:    email,
+        password: password,
+      }, (error, data) => {
+        isBlank(error) ? resolve(data) : reject(error); // jshint ignore:line
+      });
+
     });
 
   },
@@ -79,7 +81,7 @@ export default SessionService.extend({
       if ( isBlank(email) || isBlank(password) ) reject();
 
       this.get('firebase').removeUser({
-        email:     user,
+        email:     email,
         password : password
       }, function(error) {
         isBlank(error) ? resolve() : reject(error); // jshint ignore:line
@@ -88,7 +90,7 @@ export default SessionService.extend({
 
   },
 
-  resetPassword(email) {
+  resetPassword(email, password) {
     return new RSVP.Promise((resolve, reject) => {
       if (isBlank(password)) reject();
 

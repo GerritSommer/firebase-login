@@ -37,7 +37,7 @@ export default function() {
             isTemporaryPassword:  false,
             profileImageURL:      'https://secure.gravatar.com/avatar/a8a195b797911d7f03fbc98c849225f4?d=retro'
           }
-        }
+        };
       }
 
     } else {
