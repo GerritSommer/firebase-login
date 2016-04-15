@@ -1,28 +1,26 @@
-<form class="login--form {{if loginFailed 'login--form__invalid'}}">
+<form class="form-horizontal">
 
-  {{#if session.isAuthenticated}}
-    <button {{action 'signOut'}} class="btn btn--small">logout</button>
-  {{else}}
-    {{input value=email
-      insert-newline="signIn"
-      class="text-input"
-      placeholder=(t 'user.attributes.email')
-      disabled=session.isWorking
-    }}
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      {{input value=email type="email"  class="form-control" placeholder="email"}}
+    </div>
+  </div>
 
-    {{input value=password
-      insert-newline="signIn"
-      class="text-input"
-      placeholder=(t 'user.attributes.password')
-      disabled=session.isWorking
-    }}
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      {{input value=password type="password"  class="form-control" placeholder="Password"}}
+    </div>
+  </div>
 
-    <button {{action 'signIn'}} class="btn">login</button>
-  {{/if}}
+  <div class="col-sm-offset-2 col-sm-10 form-inline">
+    <button class="btn btn-default" type="button" onclick={{action "signIn"}}>Login</button>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> <small>Remember me</small>
+      </label>
+    </div>
+  </div>
 
 </form>
-{{!-- is Authenticating --}}
-{{!-- torii.isWorking --}}
- {{!-- <img src='{{session.currentUser.profileImageURL}}' /> --}}
-
-{{yield}}
