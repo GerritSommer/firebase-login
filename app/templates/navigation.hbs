@@ -1,6 +1,8 @@
 <div class="panel panel-default">
   <div class="panel-heading borderless">
-    <img src="assets/images/logo.png" alt="logo" class="img-responsive center-block">
+    {{#link-to 'application'}}
+      <img src="assets/images/logo.png" alt="logo" class="img-responsive center-block">
+    {{/link-to}}
   </div>
 
   <div class="panel-body">
@@ -19,12 +21,14 @@
         {{/link-to}}
       </li>
 
+      <li class="text-uppercase">
+        {{#link-to 'cocktails'}}
+          Cocktails
+        {{/link-to}}
+      </li>
+
     </ul>
   </div>
-
-
-
-
 
 </div>
 
