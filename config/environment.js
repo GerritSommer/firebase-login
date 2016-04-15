@@ -9,7 +9,7 @@ module.exports = function(environment) {
     locationType:     'auto',
     environment:      environment,
 
-    firebase: 'https://sommer.firebaseio.com/',
+    firebase: 'https://kater-restaurant.firebaseio.com/',
 
     contentSecurityPolicy: {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
