@@ -12,6 +12,15 @@ Router.map(function() {
   });
   this.route('impressum');
   this.route('contact', { path: 'kontakt' });
+
+  this.route('articles', function() {
+    this.route('new');
+  });
+  this.route('login');
+  this.route('speisekarte');
+  this.route('cocktails', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

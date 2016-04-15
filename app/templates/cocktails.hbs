@@ -1,0 +1,42 @@
+<div class="container-fluid">
+
+  {{#if session.isAuthenticated}}
+    <div class="row">
+      <div class="col-md-12">
+        {{#link-to 'cocktails.new' tagName="button" class="btn btn-default pull-right hide-active-link"}}
+          {{fa-icon "glass"}} Add new cocktail
+        {{/link-to}}
+      </div>
+    </div>
+  {{/if}}
+
+  <div class="container-fluid">
+    <div class="menu">
+
+      <div class="row menu-items">
+
+        {{outlet}}
+
+        {{#each model as |cocktail|}}
+          <div class="menu--item col-sm-6 col-xs-12">
+            <div class="menu--item__wrapper clearfix ">
+              <h4>{{cocktail.name}}</h4>
+
+              <span class="menu--item--price">
+                {{cocktail.price}} €
+
+              </span>
+
+              <div class="menu--item--border__dotted"></div>
+            </div>
+            <p>{{cocktail.description}}</p>
+          </div>
+        {{/each}}
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,48 @@
+.menu {
+  .menu--item {
+    overflow: hidden;
+    margin: 15px 0px;
+    padding-left: .5;
+
+    &__wrapper {
+      position: relative;
+      z-index: 1;
+
+      &__half {
+        width: 48.5%;
+      }
+    }
+
+    h4 {
+      display: inline-block;
+      float: left;
+      line-height: .8em;
+      margin: 5px 0px;
+      padding-right: 10px;
+      padding-bottom: 1px;
+      text-align: left;
+      background: #2d2d2d;
+    }
+
+    &--price {
+      float: right;
+      line-height: .8em;
+      padding-left: 10px;
+      margin: 5px 0px;
+      background: #2d2d2d none repeat scroll 0% 0%;
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+
+    &--border__dotted {
+      position: absolute;
+      left: 0px;
+      top: 1.2em;
+      width: 100%;
+      z-index: -1;
+      border-top: dotted 2px #ccc;
+    }
+
+  }
+
+}
