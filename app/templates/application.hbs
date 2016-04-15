@@ -28,11 +28,24 @@
           {{!-- Footer --}}
           <div class="panel-footer borderless">
             <ul class="list-inline text-center">
+
               <li>
                 {{#link-to "impressum"}}
                   impressum
                 {{/link-to}}
               </li>
+
+              {{#if session.isAuthenticated}}
+                {{#link-to "articles.new"}}
+                  new Article
+                {{/link-to}}
+
+              {{else}}
+                {{#link-to "login"}}
+                  {{fa-icon "cog"}}
+                {{/link-to}}
+              {{/if}}
+
             </ul>
 
           </div>
