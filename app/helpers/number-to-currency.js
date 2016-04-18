@@ -26,7 +26,9 @@ export default Helper.extend({
         if ( precision === 'integer' ) {
           convertedNumber = parseInt(number).toString();
         } else {
-          convertedNumber = number.toString().replace('.', separator);
+          convertedNumber = number
+            .toFixed(2)
+            .replace('.', separator);
         }
 
         return `${convertedNumber} ${symbol}`;
@@ -34,6 +36,8 @@ export default Helper.extend({
 
     },
 
+    // TODO: Might not be good to use an observer for this
+    //       Find a better solution
     _recomputeOnLocaleChange: observer('_locale', function() {
       this.recompute();
     })
