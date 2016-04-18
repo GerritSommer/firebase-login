@@ -20,7 +20,11 @@ Router.map(function() {
   this.route('speisekarte');
   this.route('cocktails', function() {
     this.route('new');
+    this.route('cocktail', { path: ':cocktail_id' }, function() {
+      this.route('edit');
+    });
   });
+
 });
 
 export default Router;

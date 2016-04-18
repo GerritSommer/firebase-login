@@ -16,9 +16,10 @@
     h4 {
       display: inline-block;
       float: left;
-      line-height: .8em;
+      line-height: 1em;
+      font-size: 1.2em;
       margin: 5px 0px;
-      padding-right: 10px;
+      padding-right: 5px;
       padding-bottom: 1px;
       text-align: left;
       background: #2d2d2d;
@@ -26,18 +27,30 @@
 
     &--price {
       float: right;
-      line-height: .8em;
-      padding-left: 10px;
+      line-height: 1em;
       margin: 5px 0px;
+      padding-left: 5px;
+      padding-bottom: 1px;
       background: #2d2d2d none repeat scroll 0% 0%;
-      font-size: 1.5em;
-      font-weight: 700;
+      font-size: 1.2em;
+    }
+
+    &--description {
+      float: left;
+      margin-top: 0;
+    }
+
+    &--toolbar {
+      float: right;
+      a {
+        color: $white;
+      }
     }
 
     &--border__dotted {
       position: absolute;
       left: 0px;
-      top: 1.2em;
+      top: 1.1em;
       width: 100%;
       z-index: -1;
       border-top: dotted 2px #ccc;

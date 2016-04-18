@@ -8,5 +8,10 @@ export default {
   // },
   //
   // "key.with.interpolation": "Text with {{anInterpolation}}"
-  brand: 'sommer'
+  brand: 'sommer',
+  currencySymbol: '$',
+  currency: 'dollar',
+  separator: '.',
+  delimiter: ','
+
 };

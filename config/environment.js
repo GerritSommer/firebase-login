@@ -35,7 +35,7 @@ module.exports = function(environment) {
     },
 
     i18n: {
-      defaultLocale: 'en'
+      defaultLocale: 'de'
     }
 
   };

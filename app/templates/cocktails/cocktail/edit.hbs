@@ -1,0 +1,31 @@
+<div class="menu--item col-sm-6 col-xs-12">
+
+  <div class="menu--item__wrapper clearfix">
+
+    <h4>{{model.name}}</h4>
+
+    <span class="menu--item--price">
+      {{number-to-currency model.price
+        showCurrencySymbol=true
+        precision="float"
+      }}
+    </span>
+
+    <div class="menu--item--border__dotted"></div>
+
+
+  </div>
+
+  <p class="menu--item--description">
+    {{model.description}}
+  </p>
+
+  {{#if session.isAuthenticated}}
+    <div class="menu--item--toolbar">
+      {{#link-to 'cocktails.cocktail.edit' model class="link__white"}}
+        {{fa-icon "edit"}}
+      {{/link-to}}
+    </div>
+  {{/if}}
+
+</div>

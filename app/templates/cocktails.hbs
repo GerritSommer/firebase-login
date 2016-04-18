@@ -15,22 +15,45 @@
 
       <div class="row menu-items">
 
-        {{outlet}}
+
 
         {{#each model as |cocktail|}}
-          <div class="menu--item col-sm-6 col-xs-12">
-            <div class="menu--item__wrapper clearfix ">
+
+
+          {{outlet cocktail.id}}
+
+          {{#active-link tagName="div" activeClass="hidden" class="menu--item col-sm-6 col-xs-12"}}
+
+            <div class="menu--item__wrapper clearfix">
+
               <h4>{{cocktail.name}}</h4>
 
               <span class="menu--item--price">
-                {{cocktail.price}} €
-
+                {{number-to-currency cocktail.price
+                  showCurrencySymbol=true
+                  precision="float"
+                }}
               </span>
 
               <div class="menu--item--border__dotted"></div>
+
+
             </div>
-            <p>{{cocktail.description}}</p>
-          </div>
+
+            <p class="menu--item--description">
+              {{cocktail.description}}
+            </p>
+
+            {{#if session.isAuthenticated}}
+              <div class="menu--item--toolbar">
+                {{#link-to 'cocktails.cocktail.edit' cocktail class="link__white"}}
+                  {{fa-icon "edit"}}
+                {{/link-to}}
+              </div>
+            {{/if}}
+
+          {{/active-link}}
+
         {{/each}}
 
       </div>
