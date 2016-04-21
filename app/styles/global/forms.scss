@@ -1,3 +1,9 @@
 .clickable {
   cursor: pointer;
 }
+
+fieldset.fieldset {
+  padding: 1em;
+  background: $lighter-gray;
+  border-radius: 3px;
+}

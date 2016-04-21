@@ -1,27 +1,33 @@
 <div class="container-fluid">
 
-  {{#if session.isAuthenticated}}
-    <div class="row">
-      <div class="col-md-12">
-        {{#link-to 'cocktails.new' tagName="button" class="btn btn-default pull-right hide-active-link"}}
-          {{fa-icon "glass"}} Add new cocktail
-        {{/link-to}}
-      </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>
+        Cocktails
+       {{#if session.isAuthenticated}}
+          {{#link-to 'cocktails.new' tagName="button" class="btn btn-default pull-right hide-active-link"}}
+            {{fa-icon "glass"}} Add new cocktail
+          {{/link-to}}
+        {{/if}}
+      </h3>
     </div>
-  {{/if}}
+  </div>
+
 
   <div class="container-fluid">
     <div class="menu">
 
       <div class="row menu-items">
 
-
+        {{!-- Default outlet --}}
+        {{outlet}}
 
         {{#each model as |cocktail|}}
 
+          {{!-- named outlet to render the individual item in it --}}
+          {{!outlet cocktail.id}}
 
-          {{outlet cocktail.id}}
-
+          {{!-- Hide the menu item, so we can show the form instead --}}
           {{#active-link tagName="div" activeClass="hidden" class="menu--item col-sm-6 col-xs-12"}}
 
             <div class="menu--item__wrapper clearfix">
@@ -29,15 +35,14 @@
               <h4>{{cocktail.name}}</h4>
 
               <span class="menu--item--price">
-                {{number-to-currency cocktail.price
+                {{!number-to-currency cocktail.price
                   showCurrencySymbol=true
                   precision="float"
                 }}
+                 {{cocktail.price}} €
               </span>
 
               <div class="menu--item--border__dotted"></div>
-
-
             </div>
 
             <p class="menu--item--description">
@@ -53,12 +58,12 @@
             {{/if}}
 
           {{/active-link}}
-
         {{/each}}
 
       </div>
 
     </div>
+
   </div>
 
 

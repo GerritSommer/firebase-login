@@ -8,5 +8,6 @@ export default Model.extend({
   description: attr('string'),
   sortOrder:   attr('number'),
 
-  menuItems: hasMany('menu-item')
+  // menuItems:   hasMany('menu-item')
+  cocktails:   hasMany('cocktails')
 });

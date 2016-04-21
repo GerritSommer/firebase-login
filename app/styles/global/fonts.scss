@@ -63,3 +63,19 @@ small {
 .active.hide-active-link {
   display: none;
 }
+
+.fa.clickable {
+  font-size: 1.5em;
+
+  &.fa--default {
+    color: $brand-primary;
+  }
+
+  &.fa--danger {
+    color: $brand-danger;
+  }
+
+  &.fa--success {
+    color: $brand-success;
+  }
+}

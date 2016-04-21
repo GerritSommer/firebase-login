@@ -13,7 +13,7 @@ export default Model.extend({
   name:           attr('string'),
   description:    attr('string'),
   sortOrder:      attr('number'),
-  price:          attr('number'),
+  price:          attr('string'),
 
   category:       belongsTo('category'),
 

@@ -1,8 +1,13 @@
 import Ember from 'ember';
 
+let { computed } = Ember;
+let computedFilterBy = Ember.computed.filterBy;
+
 export default Ember.Controller.extend({
-  test: 'lala',
- actions: {
+
+  uncategorized: computedFilterBy('model', 'category', true),
+
+  actions: {
 
     saveCocktail() {
       let cocktail = this.get('model');

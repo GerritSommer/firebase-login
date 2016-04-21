@@ -1,6 +1,6 @@
-<div class="menu--item col-sm-6 col-xs-12">
+<div class="menu--item col-xs-12">
 
-  <div class="menu--item__wrapper clearfix">
+  <fieldset class="fieldset menu--item__wrapper clearfix">
     <div class="row">
 
       <div class="form-group col-sm-10 col-xs-12">
@@ -30,13 +30,13 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="menu--item--toolbar">
-          {{fa-icon "times" class="clickable" click=(action "cancel")}}
-          {{fa-icon "check" class="clickable" click=(action "saveCocktail")}}
+          {{fa-icon "times" class="clickable fa--danger" size=1 click=(action "cancel")}}
+          {{fa-icon "check" class="clickable fa--success" size=1 click=(action "saveCocktail")}}
         </div>
       </div>
     </div>
 
-  </div>
+  </fieldset>
 
 
 </div>
