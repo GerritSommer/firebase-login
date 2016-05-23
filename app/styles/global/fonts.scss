@@ -16,19 +16,19 @@ body {
   //   text-rendering: optimizeLegibility;
 
 }
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.1em;
-  color: $myriad;
-  font-family: myriad;
-}
+// h1, h2, h3, h4, h5, h6 {
+//   font-size: 1.1em;
+//   color: $myriad;
+//   font-family: myriad, Helvetica, Arial, sans-serif;
+// }
 
-a {
-  text-decoration: underline;
+// a {
+//   text-decoration: underline;
 
-  &.default-color {
-    color: $text-color;
-  }
-}
+//   &.default-color {
+//     color: $text-color;
+//   }
+// }
 
 a:hover {
   color: #000000;
@@ -67,15 +67,15 @@ small {
 .fa.clickable {
   font-size: 1.5em;
 
-  &.fa--default {
-    color: $brand-primary;
-  }
+  // &.fa--default {
+  //   color: $brand-primary;
+  // }
 
-  &.fa--danger {
-    color: $brand-danger;
-  }
+  // &.fa--danger {
+  //   color: $brand-danger;
+  // }
 
-  &.fa--success {
-    color: $brand-success;
-  }
+  // &.fa--success {
+  //   color: $brand-success;
+  // }
 }

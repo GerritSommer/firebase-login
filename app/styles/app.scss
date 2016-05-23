@@ -1,27 +1,30 @@
 // app/styles/app.scss
 @import "global/colours";
-@import "global/bootstrap-variables";
+// @import "global/bootstrap-variables";
 @import "global/fonts";
 
-@import "global/panels";
-@import "global/forms";
+// @import "global/panels";
+// @import "global/forms";
 
 @import 'bootstrap';
 
-@import "components/sidebar";
-@import "components/menu";
+// @import "components/sidebar";
+// @import "components/menu";
 
 [data-ember-action]:not(:disabled) {
   cursor: pointer;
 }
 
 body {
-  background: url(images/bg.jpg) no-repeat center center fixed;
+  // background: url(images/bg.jpg) no-repeat center center fixed;
   // -webkit-background-size: cover;
   // -moz-background-size: cover;
   // -o-background-size: cover;
-  background-size: cover;
-  margin: 2em 0;
+  // background-size: cover;
+  // margin: 2em 0;
+  background: transparent;
+  background: #fff;
+  font-family: myriad, Helvetica, Arial, sans-serif;
 }
 
 hr {
@@ -32,8 +35,183 @@ hr {
   margin: .5em 0;
 }
 
-
 .container-fluid {
   max-width: 1600px;
 }
 
+header {
+  // background:url(images/logo.png) no-repeat 0% 0% / 100% auto;
+
+  // background: url(images/bg.jpg) no-repeat center center fixed;
+
+}
+
+.header--background {
+  // background: url(images/bg.jpg) no-repeat 0% 0% / 100% auto;
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  background-color:rgba(31, 20, 20, 0.8);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logo a {
+  h1 {
+    text-align: center;
+    color: #FFF;
+    padding: 10px;
+    border: 2px solid #FFF;
+    display: block;
+    margin: 20px 0px;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 28px;
+  }
+
+  img {
+    max-width: 100px;
+  }
+}
+
+.navigation {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  background: transparent;
+  line-height: 0;
+}
+
+.menu {
+  display: inline-block;
+  margin: 0px !important;
+  list-style: none;
+  padding-left: 0px !important;
+  float: none;
+
+  li {
+    float: left;
+
+    &:after {
+      // color: #f8bd08;
+      color: $myriad;
+      content: '~';
+      display: inline-block;
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+
+    a {
+      padding: 20px;
+      display: inline-block;
+      color: #ccc !important;
+      font-family: "Lato", sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+      color: fff !important;
+
+      &:hover, &:focus {
+         text-decoration: none;
+          // color: #f8bd08 !important;
+          color: $yellow !important;
+          background-color: rgba(255, 255, 255, 0.1) !important;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.menubox {
+  text-align: center;
+}
+
+.text-banner {
+  // padding: 20px 0px 200px;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  background-color:rgba(31, 20, 20, 0.9);
+
+
+  p {
+    font-family: "Lato", sans-serif;
+    color: #ccc;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  h2 {
+    color: $myriad;
+    // font-family: 'Niconne', cursive;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 100;
+  }
+
+}
+
+
+
+// .welcome {
+
+//   padding: 40px 0px;
+
+// }
+
+// .section-container h3 {
+
+//   // font-family: 'Niconne', cursive;
+//   color: #f8bd08;
+//   font-size: 45px;
+//   font-weight: 100;
+//   margin: 0px 0px -10px;
+//   line-height: 1.5;
+
+// }
+
+// .header-text {
+
+//   font-family: "Oxygen", sans-serif;
+
+//   font-weight: 400;
+
+//   letter-spacing: 5px;
+
+//   text-transform: uppercase;
+
+//   font-size: 26px;
+
+//   padding-top: 5px;
+
+//   display: block;
+
+// }
+
+// .welcome-text p {
+
+//   color: #888;
+//   font-family: "Lato", sans-serif;
+
+//   font-size: 16px;
+
+//   margin-top: 15px;
+
+//   line-height: 28px;
+
+// }
+
+// .welcome-image img {
+//   width: 100%;
+// }
